@@ -41,3 +41,7 @@ if minetest.get_modpath("default") then
     pick_axe_tweaks.register_pick_axes(default_pick_axes)
 end
 ```
+
+## Other comments
+
+Thanks to luk3yx, SX for suggestions

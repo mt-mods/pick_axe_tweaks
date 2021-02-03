@@ -31,8 +31,7 @@ function pick_axe_tweaks.register_pick_axes(pick_axes)
                     local noddef = minetest.registered_nodes[minetest.get_node(pointed_thing.under).name]
 
                     if not player:get_player_control().sneak and noddef.on_rightclick then
-                        minetest.item_place(itemstack, player, pointed_thing)
-                        return
+                        return minetest.item_place(itemstack, player, pointed_thing)
                     elseif pointed_thing.type ~= "node" then return
                     end
 
