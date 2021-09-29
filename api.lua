@@ -18,6 +18,8 @@ function pick_axe_tweaks.register_pick_axes(pick_axes)
         if minetest.registered_items[pa] then
             minetest.override_item(pa, {
                 on_place = function(itemstack, player, pointed_thing)
+                    --should prevent crashes of mods passing fake players improperly
+                    if type(player) ~= "userdata" then return end
                     local pmeta = player:get_meta()
                     if pmeta:get_string("pa_status") == "false" then
                         return
