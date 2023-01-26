@@ -1,6 +1,7 @@
 # Minetest Pickaxe Tweaks Mod
 ![Luacheck](https://github.com/wsor4035/pick_axe_tweaks/workflows/luacheck/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![ContentDB](https://content.minetest.net/wsor4035/pick_axe_tweaks/shields/downloads/)](https://content.minetest.net/packages/wsor4035/pick_axe_tweaks/)
 
 ## About
 
@@ -9,7 +10,7 @@ Adds the ability for pickaxes to place light nodes. Configurable per player.
 ## Links
 
 * [Github](https://github.com/wsor4035/pick_axe_tweaks)
-* ContentDB (not yet available)
+* [ContentDB](https://content.minetest.net/packages/wsor4035/pick_axe_tweaks/)
 * Minetest forum (not avaible yet)
 
 ## Setup
