@@ -1,1 +1,2 @@
-pat_light_node (default light node) string default:torch
+# The default light node to placed by pickaxes.
+pat_light_node (Default light node) string default:torch
