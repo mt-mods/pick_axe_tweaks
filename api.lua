@@ -8,15 +8,15 @@ function pick_axe_tweaks.is_light_node(name)
 end
 
 local function default_light_node()
-    local node = minetest.settings:get("pat_light_node")
+	local node = minetest.settings:get("pat_light_node")
 
-    if not minetest.registered_nodes[node] then
-        return "default:torch"
-    elseif not pick_axe_tweaks.is_light_node(node) then
-        minetest.log("error", "[pick_axe_tweaks] Node " .. node .. " is not a light")
-    else
-        return node
-    end
+	if not minetest.registered_nodes[node] then
+		return "default:torch"
+	elseif not pick_axe_tweaks.is_light_node(node) then
+		minetest.log("error", "[pick_axe_tweaks] Node " .. node .. " is not a light")
+	else
+		return node
+	end
 end
 
 local function place_light(itemstack, player, pointed_thing)
@@ -57,11 +57,11 @@ local function place_light(itemstack, player, pointed_thing)
 end
 
 function pick_axe_tweaks.register_pick_axes(pick_axes)
-    for _, pa in pairs(pick_axes) do
-        if minetest.registered_items[pa] then
-            minetest.override_item(pa, {
-                on_place = place_light,
-            })
-        end
-    end
+	for _, pa in pairs(pick_axes) do
+		if minetest.registered_items[pa] then
+			minetest.override_item(pa, {
+				on_place = place_light,
+			})
+		end
+	end
 end
