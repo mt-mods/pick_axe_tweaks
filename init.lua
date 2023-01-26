@@ -1,4 +1,4 @@
-modpath = minetest.get_modpath("pick_axe_tweaks")
+local modpath = minetest.get_modpath("pick_axe_tweaks")
 dofile(modpath .. "/api.lua")
 dofile(modpath .. "/chat_commands.lua")
 
