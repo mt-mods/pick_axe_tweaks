@@ -1,21 +1,17 @@
 # Minetest Pickaxe Tweaks Mod
 ![Luacheck](https://github.com/wsor4035/pick_axe_tweaks/workflows/luacheck/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![ContentDB](https://content.minetest.net/wsor4035/pick_axe_tweaks/shields/downloads/)](https://content.minetest.net/packages/wsor4035/pick_axe_tweaks/)
+[![ContentDB](https://content.minetest.net/packages/wsor4035/pick_axe_tweaks/shields/downloads/)](https://content.minetest.net/packages/wsor4035/pick_axe_tweaks/)
+
 
 ## About
 
 Adds the ability for pickaxes to place light nodes. Configurable per player.
 
-## Links
-
-* [Github](https://github.com/wsor4035/pick_axe_tweaks)
-* [ContentDB](https://content.minetest.net/packages/wsor4035/pick_axe_tweaks/)
-* Minetest forum (not avaible yet)
 
 ## Setup
 
-Download mod, put in your `mods` or `worldmods` folder and enable it.
+Download mod, put in your `mods` or `worldmods` folder and enable it. You can also install it from the content tab in Minetest, or download it from [ContentDB](https://content.minetest.net/packages/wsor4035/pick_axe_tweaks/).
 
 If not using with Minetest Game, please change the default light node setting.
 
@@ -25,19 +21,9 @@ If not using with Minetest Game, please change the default light node setting.
 
 ## API
 
-`pick_axe_tweaks.register_pick_axes()`: Registers a list of pickaxes.
+For pickaxes, simply add the `pickaxe` group to the tool's groups, and it will automatically be registered.
 
-Example:
-
-```lua
-local pickaxes = {
-	"my_mod:pick_wood",
-	"my_mod:pick_stone",
-	"my_mod:pick_diamond",
-}
-
-pick_axe_tweaks.register_pick_axes(pickaxes)
-```
+Alternatively, for non-pickaxes, you can use the API function: `pick_axe_tweaks.register_tool(name)`
 
 ## Other comments
 
