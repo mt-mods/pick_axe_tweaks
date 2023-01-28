@@ -56,12 +56,20 @@ local function place_light(itemstack, player, pointed_thing)
 	end
 end
 
+function pick_axe_tweaks.register_tool(name)
+	if minetest.registered_items[name] then
+		minetest.override_item(name, {
+			on_place = place_light,
+		})
+	end
+end
+
+-- Deprecated API function, kept for compatibility
 function pick_axe_tweaks.register_pick_axes(pick_axes)
+	minetest.log("warning", "[pick_axe_tweaks] `pick_axe_tweaks.register_pick_axes()` is deprecated. " ..
+			"Please add the `pickaxe` group, or use `pick_axe_tweaks.register_tool()`")
+
 	for _, pa in pairs(pick_axes) do
-		if minetest.registered_items[pa] then
-			minetest.override_item(pa, {
-				on_place = place_light,
-			})
-		end
+		pick_axe_tweaks.register_tool(pa)
 	end
 end

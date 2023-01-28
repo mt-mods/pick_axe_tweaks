@@ -1,47 +1,30 @@
-# Minetest Pick_Axe_Tweaks Mod
-
+# Minetest Pickaxe Tweaks Mod
 ![Luacheck](https://github.com/wsor4035/pick_axe_tweaks/workflows/luacheck/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![ContentDB](https://content.minetest.net/packages/wsor4035/pick_axe_tweaks/shields/downloads/)](https://content.minetest.net/packages/wsor4035/pick_axe_tweaks/)
+
 
 ## About
 
-adds the ability for pick axes to place a configurable light node ffrom in game and per player
+Adds the ability for pickaxes to place light nodes. Configurable per player.
 
-## Links
-
-* [Github](https://github.com/wsor4035/pick_axe_tweaks)
-* [Contentdb](not yet available)
-* [forums](not avaible yet)
 
 ## Setup
 
-download mod, put in your worldmods folder, or mods folder and enable it
-* if not using with mtg, please change the setting found under header `minetest.conf settings`
-* also use a mod that uses this mods api to register its pick axes
+Download mod, put in your `mods` or `worldmods` folder and enable it. You can also install it from the content tab in Minetest, or download it from [ContentDB](https://content.minetest.net/packages/wsor4035/pick_axe_tweaks/).
 
-## minetest.conf settings 
+If not using with Minetest Game, please change the default light node setting.
 
-* pat_light_node (by default default:torch): default light node for pick axes
+## Settings 
+
+* `pat_light_node`: Default light node. (by default `default:torch`)
 
 ## API
 
-example pulled from init.lua
+For pickaxes, simply add the `pickaxe` group to the tool's groups, and it will automatically be registered.
 
-```lua
-if minetest.get_modpath("default") then
-    local default_pick_axes = {
-        "default:pick_wood",
-        "default:pick_stone",
-        "default:pick_bronze",
-        "default:pick_steel",
-        "default:pick_mese",
-        "default:pick_diamond",
-    }
-
-    pick_axe_tweaks.register_pick_axes(default_pick_axes)
-end
-```
+Alternatively, for non-pickaxes, you can use the API function: `pick_axe_tweaks.register_tool(name)`
 
 ## Other comments
 
-Thanks to luk3yx, SX for suggestions
+Thanks to @luk3yx and @S-S-X for suggestions.
