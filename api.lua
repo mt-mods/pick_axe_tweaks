@@ -45,7 +45,7 @@ local function place_light(itemstack, player, pointed_thing)
 
 	node = minetest.get_node(pointed_thing.above)
 	def = minetest.registered_nodes[node.name]
-	if not def or not def.buildable_to or not def.drawtype == "airlike" then
+	if not def or not def.buildable_to or def.drawtype ~= "airlike" then
 		return
 	end
 
