@@ -11,7 +11,7 @@ Adds the ability for pickaxes to place light nodes. Configurable per player.
 
 ## Setup
 
-Download mod, put in your `mods` or `worldmods` folder and enable it. You can also install it from the content tab in Minetest, or download it from [ContentDB](https://content.minetest.net/packages/wsor4035/pick_axe_tweaks/).
+Download mod, put in your `mods` or `worldmods` folder and enable it. You can also install it from the content tab in Minetest, or download it from [ContentDB](https://content.minetest.net/packages/mt-mods/pick_axe_tweaks/).
 
 If not using with Minetest Game, please change the default light node setting.
 
